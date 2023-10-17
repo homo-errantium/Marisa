@@ -1,0 +1,49 @@
+body {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: #efefef;
+    color: #333132;
+}
+
+.page {
+    position: relative;
+    box-sizing: border-box;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* max-width: 1280px; */
+    margin: 0 auto;
+    min-width: 320px;
+    width: 100%;
+    font-family: 'Montserrat', 'Arial', 'sans-serif';
+    font-style: normal;
+    line-height: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+}
+
+/*для sticker footer*/
+.wrapper {
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+/*для sticker footer*/
+.main {
+    flex-grow: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
