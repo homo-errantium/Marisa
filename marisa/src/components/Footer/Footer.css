@@ -1,24 +1,18 @@
 .footer {
-    flex-grow: 0;
-    flex-shrink: 0;
-    padding: 20px 70px;
+    flex-grow: 0; /*чтобы футер не рос*/
+    flex-shrink: 0; /*чтобы футер не сжимался*/
+    box-sizing: border-box;
     background: transparent;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-}
-
-.footer__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding: 18px 70px;
 }
+
 .footer__author {
     font-size: 14px;
     font-weight: 400;
-    letter-spacing: 0.1em;
     text-transform: uppercase;
     text-decoration: none;
 }

@@ -17,6 +17,9 @@ function Navigation() {
         <div className='navigation'>
             <>
                 <nav className='navigation__links'>
+                    <Link to='/' className='navigation__link'>
+                        Главная
+                    </Link>
                     <Link to='/menu' className='navigation__link'>
                         Меню
                     </Link>

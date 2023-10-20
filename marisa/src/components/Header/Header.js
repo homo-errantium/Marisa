@@ -1,12 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../../images/logo.jpg';
+import logo from '../../images/logo-marisa.jpg';
 import './Header.css';
 import Navigation from '../Navigation/Navigation';
 
 function Header() {
     return (
-        /*цвет шапки*/
         <header className='header'>
             <NavLink className='header__logo' to='/'>
                 <img

@@ -8,11 +8,6 @@
     align-items: center;
     width: 100%;
     padding: 18px 70px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
 }
 
 .header__logo:hover {

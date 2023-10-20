@@ -1,0 +1,23 @@
+.main__bottom {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 70px;
+    margin-bottom: 30px;
+}
+
+.main__bottom-title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.main__bottom-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.main__bottom-image {
+    width: 200px;
+    height: 200px;
+}

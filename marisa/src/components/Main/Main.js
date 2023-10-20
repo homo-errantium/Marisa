@@ -1,17 +1,20 @@
 import './Main.css';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+import MainTop from '../MainTop/MainTop';
+import MainMiddle from '../MainMiddle/MainMiddle';
+import MainBottom from '../MainBottom/MainBottom';
 
 function Main() {
     return (
-        <div className='wrapper wrapper_main'>
+        <div className='wrapper'>
+            <Header />
             <main className='main'>
-                <h1 className='main__title'>Marisa</h1>
-                <h2 className='main__subtitle'>Торты на заказ в Казани</h2>
-                <h3 className='main__description'>кондитер Марина Сафина</h3>
-                <div className='main__buttons'>
-                    <button className='main__phone-button'></button>
-                    <button className='main__whatsup-button'></button>
-                </div>
+                <MainTop />
+                <MainMiddle />
+                <MainBottom />
             </main>
+            <Footer />
         </div>
     );
 }

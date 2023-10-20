@@ -5,17 +5,25 @@ body {
     margin: 0;
     background: #efefef;
     color: #333132;
+
+    background-image: url('../../images/main-bg-mono.jpg');
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.5)),
+        url('../../images/main-bg-mono3.jpg');
+    object-fit: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
 }
 
 .page {
-    position: relative;
-    box-sizing: border-box;
-    min-height: 100%;
     display: flex;
     flex-direction: column;
-    /* max-width: 1280px; */
-    margin: 0 auto;
+    box-sizing: border-box;
+    max-width: 1280px;
     min-width: 320px;
+    min-height: 100%;
+    margin: 0 auto;
     width: 100%;
     font-family: 'Montserrat', 'Arial', 'sans-serif';
     font-style: normal;
@@ -34,7 +42,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: relative;
 }
 
 /*для sticker footer*/
