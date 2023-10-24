@@ -1,6 +1,7 @@
 .main__middle {
     display: flex;
     flex-direction: column;
+    align-items: center;
     row-gap: 80px;
     margin-bottom: 92px;
     max-width: 984px;
@@ -10,6 +11,16 @@
     display: flex;
     align-items: center;
     gap: 100px;
+}
+
+.main__info__button {
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    background-color: #a58372;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 .main__info-image {
@@ -42,10 +53,6 @@
     line-height: 2;
 }
 
-.main__info_desserts {
-    flex-direction: row-reverse;
-}
-
-.main__info_feedback {
+.main__info_right {
     flex-direction: row-reverse;
 }

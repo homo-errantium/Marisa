@@ -21,9 +21,9 @@ function Navigation() {
                         Главная
                     </Link>
                     <Link to='/menu' className='navigation__link'>
-                        Меню
+                        Торты
                     </Link>
-                    <Link to='/cakes' className='navigation__link'>
+                    <Link to='/fillings' className='navigation__link'>
                         Начинки
                     </Link>
                     <Link to='/about-me' className='navigation__link'>

@@ -24,3 +24,12 @@
     font-style: normal;
     font-weight: 600;
 }
+
+@font-face {
+    src: url('./beauRivage/BeauRivage-Regular.woff2') format('woff2'),
+        url('./beauRivage/BeauRivage-Regular.woff') format('woff');
+    font-family: 'Beau Rivage';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

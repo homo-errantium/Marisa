@@ -1,8 +1,9 @@
 import './Footer.css';
-import logoVk from '../../images/logo-vk.png';
-import logoTelegram from '../../images/logo-telegram.png';
-import logoEmail from '../../images/logo-email.png';
-import logoPhone from '../../images/logo-phone.png';
+import logoVk from '../../images/vkontakte-image2.png';
+import logoTelegram from '../../images/telegram-image2.png';
+import logoEmail from '../../images/email-image2.png';
+import logoPhone from '../../images/phone-image2.png';
+import logoWhatsapp from '../../images/whatsapp-image2.png';
 
 function Footer() {
     return (
@@ -16,6 +17,20 @@ function Footer() {
                 made by Aishat Safin &copy; 2023
             </a>
             <ul className='footer__links'>
+                <li className='footer__item'>
+                    <a
+                        className='footer__link'
+                        href='https://web.whatsapp.com/'
+                        target='_blank'
+                        rel='noreferrer'
+                    >
+                        <img
+                            src={logoWhatsapp}
+                            alt='logo vkontakte'
+                            className='footer__image'
+                        />
+                    </a>
+                </li>
                 <li className='footer__item'>
                     <a
                         className='footer__link'

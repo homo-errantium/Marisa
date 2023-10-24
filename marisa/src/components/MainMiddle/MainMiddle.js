@@ -6,7 +6,7 @@ import feedbackImage from '../../images/feedback.jpg';
 function MainMiddle() {
     return (
         <section className='main__middle'>
-            <div className='main__info main__info_author'>
+            {/* <div className='main__info main__info_left'>
                 <img
                     src={authorImage}
                     alt='фото кондитера'
@@ -28,8 +28,11 @@ function MainMiddle() {
                         натуральных продуктов.
                     </p>
                 </div>
-            </div>
-            <div className='main__info main__info_desserts'>
+            </div> */}
+
+            <button className='main__info__button'>заказать</button>
+
+            {/* <div className='main__info main__info_right'>
                 <img
                     src={dessertImage}
                     alt='фото торта'
@@ -48,7 +51,7 @@ function MainMiddle() {
                     </p>
                 </div>
             </div>
-            <div className='main__info main__info_target'>
+            <div className='main__info main__info_left'>
                 <img
                     src={targetImage}
                     alt='фото торта'
@@ -68,7 +71,7 @@ function MainMiddle() {
                     </p>
                 </div>
             </div>
-            <div className='main__info main__info_feedback'>
+            <div className='main__info main__info_right'>
                 <img src={feedbackImage} alt='' className='main__info-image' />
                 <div className='main__info-text'>
                     <h2 className='main__info-title'>Отзывы</h2>
@@ -80,7 +83,7 @@ function MainMiddle() {
                         officia quae odio, aliquam veritatis officiis ut!
                     </p>
                 </div>
-            </div>
+            </div> */}
         </section>
     );
 }

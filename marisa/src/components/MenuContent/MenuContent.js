@@ -9,11 +9,9 @@ function MenuContent() {
     return (
         <section className='menu-content'>
             <h1 className='menu-content__title'>
-                тортики и десерты в казани на заказ
-            </h1>
-            <h2 className='menu-content__subtitle'>
                 Заказывайте вкусные десерты ручной работы
-            </h2>
+            </h1>
+
             <ul className='menu-content__gallery'>
                 <MenuCard
                     cardImageSrc={cardImage1}

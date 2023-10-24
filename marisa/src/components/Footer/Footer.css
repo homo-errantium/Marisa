@@ -2,7 +2,7 @@
     flex-grow: 0; /*чтобы футер не рос*/
     flex-shrink: 0; /*чтобы футер не сжимался*/
     box-sizing: border-box;
-    background: transparent;
+    background: #a58372;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,6 +15,7 @@
     font-weight: 400;
     text-transform: uppercase;
     text-decoration: none;
+    color: #4d220e;
 }
 
 .footer__link {
@@ -43,7 +44,7 @@
 }
 
 .footer__item {
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 .footer__image {

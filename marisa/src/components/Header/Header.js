@@ -7,13 +7,13 @@ import Navigation from '../Navigation/Navigation';
 function Header() {
     return (
         <header className='header'>
-            <NavLink className='header__logo' to='/'>
+            {/* <NavLink className='header__logo' to='/'>
                 <img
                     className='header__logo-image'
                     src={logo}
                     alt='Логотип сайта'
                 />
-            </NavLink>
+            </NavLink> */}
             <Navigation />
         </header>
     );
