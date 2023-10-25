@@ -4,18 +4,19 @@
     box-sizing: border-box;
     background: #a58372;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column-reverse;
+    /* justify-content: space-between; */
     align-items: center;
     width: 100%;
     padding: 18px 70px;
 }
 
 .footer__author {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     text-decoration: none;
-    color: #4d220e;
+    color: #fff;
 }
 
 .footer__link {
@@ -41,15 +42,18 @@
     list-style: none;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 15px;
 }
 
 .footer__item {
-    margin-right: 30px;
+    margin-right: 50px;
 }
 
 .footer__image {
     width: 30px;
     height: 30px;
+    filter: invert(97%) sepia(100%) saturate(0%) hue-rotate(53deg)
+        brightness(104%) contrast(107%);
 }
 
 @media (max-width: 768px) {

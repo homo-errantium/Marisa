@@ -1,9 +1,9 @@
 import './Footer.css';
-import logoVk from '../../images/vkontakte-image2.png';
-import logoTelegram from '../../images/telegram-image2.png';
-import logoEmail from '../../images/email-image2.png';
-import logoPhone from '../../images/phone-image2.png';
-import logoWhatsapp from '../../images/whatsapp-image2.png';
+import logoVk from '../../images/vkontakte-image5.svg';
+import logoTelegram from '../../images/telegram-image5.svg';
+import logoEmail from '../../images/email-image5.svg';
+import logoPhone from '../../images/phone-image5.svg';
+import logoWhatsapp from '../../images/whatsapp-image5.svg';
 
 function Footer() {
     return (
