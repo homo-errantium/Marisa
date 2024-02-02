@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/marisa/static/css/main.b2f5443e.css",
+    "main.js": "/marisa/static/js/main.4e43fd25.js",
+    "static/js/787.2051623f.chunk.js": "/marisa/static/js/787.2051623f.chunk.js",
+    "static/media/cherryCakeImage.jpg": "/marisa/static/media/cherryCakeImage.a45a1373a3169f8a73c1.jpg",
+    "static/media/gallery2.jpg": "/marisa/static/media/gallery2.22112d6a163e46344a0c.jpg",
+    "static/media/main-bg-image.jpg": "/marisa/static/media/main-bg-image.22112d6a163e46344a0c.jpg",
+    "static/media/appleCake.jpg": "/marisa/static/media/appleCake.a2c6fc351337b21c9967.jpg",
+    "static/media/main-top-bg1.jpg": "/marisa/static/media/main-top-bg1.56bde87094d41ed9b374.jpg",
+    "static/media/gallery1.jpg": "/marisa/static/media/gallery1.01fa454bd87816c97f7f.jpg",
+    "static/media/cheeseCakeImage.jpg": "/marisa/static/media/cheeseCakeImage.35ba580099b66518d8d3.jpg",
+    "static/media/brownyImage.jpg": "/marisa/static/media/brownyImage.00638795d4be796b67ed.jpg",
+    "static/media/main-bg.jpg": "/marisa/static/media/main-bg.bf5e256f0c5451ebe287.jpg",
+    "static/media/feedback.jpg": "/marisa/static/media/feedback.7396f6b5f9be12bfb278.jpg",
+    "static/media/gallery4.jpg": "/marisa/static/media/gallery4.a4504ae50babd0c88072.jpg",
+    "static/media/gallery3.jpg": "/marisa/static/media/gallery3.ef88e2281203ecc21781.jpg",
+    "static/media/BeauRivage-Regular.woff": "/marisa/static/media/BeauRivage-Regular.6f5296df84fc70c4809d.woff",
+    "static/media/Montserrat-Bold.woff": "/marisa/static/media/Montserrat-Bold.8ce6f4ee86ac2cbc9b0f.woff",
+    "static/media/Montserrat-Medium.woff": "/marisa/static/media/Montserrat-Medium.8fbdea08412c70e6d65c.woff",
+    "static/media/Montserrat-Regular.woff": "/marisa/static/media/Montserrat-Regular.21e541a4a652a7fa0d6a.woff",
+    "static/media/BeauRivage-Regular.woff2": "/marisa/static/media/BeauRivage-Regular.aa9a079080fc8048e1b1.woff2",
+    "static/media/main-info-image.jpg": "/marisa/static/media/main-info-image.124e1f8c1c3b59e192ff.jpg",
+    "static/media/Montserrat-Bold.woff2": "/marisa/static/media/Montserrat-Bold.2695cf49ae7429c18e10.woff2",
+    "static/media/Montserrat-Medium.woff2": "/marisa/static/media/Montserrat-Medium.ee886f49896d934d6c26.woff2",
+    "static/media/Montserrat-Regular.woff2": "/marisa/static/media/Montserrat-Regular.fc432875c59da8482816.woff2",
+    "static/media/logo-marisa.jpg": "/marisa/static/media/logo-marisa.b8067948a4f948f9edf8.jpg",
+    "static/media/vkontakte-image5.svg": "/marisa/static/media/vkontakte-image5.b2b9f70377564cbeec6e855cfc52588c.svg",
+    "static/media/phone-image5.svg": "/marisa/static/media/phone-image5.fb1f9b7b0cf007140cee7d2bc46a321d.svg",
+    "static/media/whatsapp-image5.svg": "/marisa/static/media/whatsapp-image5.1f10a19d6bc4946c218ff1fb2c9faab2.svg",
+    "static/media/email-image5.svg": "/marisa/static/media/email-image5.3666559edbe970b7eed305d3477209eb.svg",
+    "static/media/telegram-image5.svg": "/marisa/static/media/telegram-image5.28ea02a9ae69c0c3f31b198dbccc38e0.svg",
+    "index.html": "/marisa/index.html",
+    "static/media/burger-menu-close-button.svg": "/marisa/static/media/burger-menu-close-button.3b9c2f50931f46d50aeb.svg",
+    "main.b2f5443e.css.map": "/marisa/static/css/main.b2f5443e.css.map",
+    "main.4e43fd25.js.map": "/marisa/static/js/main.4e43fd25.js.map",
+    "787.2051623f.chunk.js.map": "/marisa/static/js/787.2051623f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b2f5443e.css",
+    "static/js/main.4e43fd25.js"
+  ]
+}
