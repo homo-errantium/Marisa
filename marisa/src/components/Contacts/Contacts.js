@@ -15,13 +15,6 @@ function Contacts() {
             <Header />
             <main className='main'>
                 <section className='contacts'>
-                    {/* <div className='contacts__image-wrapper'>
-                        <img
-                            src={contactsImage}
-                            alt='фото десерта'
-                            className='contacts__image-top'
-                        />
-                    </div> */}
                     <div className='contacts__info contacts__info_left'>
                         <img
                             src={cherryCakeImage}
