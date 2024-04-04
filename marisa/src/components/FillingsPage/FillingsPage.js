@@ -1,9 +1,9 @@
-import './Fillings.css';
+import './FillingsPage.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import FillingsContent from '../FillingsContent/FillingsContent';
 
-function Fillings() {
+function FillingsPage() {
     return (
         <div className='wrapper'>
             <Header />
@@ -15,4 +15,4 @@ function Fillings() {
     );
 }
 
-export default Fillings;
+export default FillingsPage;

@@ -1,4 +1,4 @@
-import './Contacts.css';
+import './ContactsPage.css';
 import React from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
@@ -9,7 +9,7 @@ import logoEmail from '../../images/email-image5.svg';
 import logoPhone from '../../images/phone-image5.svg';
 import logoWhatsapp from '../../images/whatsapp-image5.svg';
 
-function Contacts() {
+function ContactsPage() {
     return (
         <div className='wrapper'>
             <Header />
@@ -151,4 +151,4 @@ function Contacts() {
     );
 }
 
-export default Contacts;
+export default ContactsPage;

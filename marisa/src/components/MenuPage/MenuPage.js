@@ -1,9 +1,9 @@
-import './Menu.css';
+import './MenuPage.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import MenuContent from '../MenuContent/MenuContent';
 
-function Menu() {
+function MenuPage() {
     return (
         <div className='wrapper'>
             <Header />
@@ -15,4 +15,4 @@ function Menu() {
     );
 }
 
-export default Menu;
+export default MenuPage;

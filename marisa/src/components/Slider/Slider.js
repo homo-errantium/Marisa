@@ -1,6 +1,7 @@
-import { useState, useEffect, Children, cloneElement } from 'react';
 import './Slider.css';
+import { useState, useEffect, Children, cloneElement } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import Card from '../Card/Card';
 
 function Slider({ children, title }) {
     const PAGE_WIDTH = 400;

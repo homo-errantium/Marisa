@@ -1,24 +1,24 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import NotFound from '../NotFound/NotFound';
-import Main from '../Main/Main';
-import Menu from '../Menu/Menu';
-import Fillings from '../Fillings/Fillings';
-import AboutMe from '../AboutMe/AboutMe';
-import Contacts from '../Contacts/Contacts';
+import NotFoundPage from '../NotFoundPage/NotFoundPage';
+import MainPage from '../MainPage/MainPage';
+import MenuPage from '../MenuPage/MenuPage';
+import FillingsPage from '../FillingsPage/FillingsPage';
+import AboutMePage from '../AboutMePage/AboutMePage';
+import ContactsPage from '../ContactsPage/ContactsPage';
 import ImagePopup from '../ImagePopup/ImagePopup';
 
 function App() {
     const [selectedCard, setSelectedCard] = React.useState(null); //выбранная карточка
 
+    // закрытие попапа
     function closeAllPopups() {
-        // закрытие попапа
         setSelectedCard(false);
     }
 
+    // открытие попапа
     function openPopupViewer(card) {
-        // открытие попапа
         setSelectedCard(card);
     }
 
@@ -27,13 +27,13 @@ function App() {
             <Routes>
                 <Route
                     path='/'
-                    element={<Main onCardClick={openPopupViewer} />}
+                    element={<MainPage onCardClick={openPopupViewer} />}
                 />
-                <Route path='/menu' element={<Menu />} />
-                <Route path='/fillings' element={<Fillings />} />
-                <Route path='/about-me' element={<AboutMe />} />
-                <Route path='/contacts' element={<Contacts />} />
-                <Route path='*' element={<NotFound />} />
+                <Route path='/menu' element={<MenuPage />} />
+                <Route path='/fillings' element={<FillingsPage />} />
+                <Route path='/about-me' element={<AboutMePage />} />
+                <Route path='/contacts' element={<ContactsPage />} />
+                <Route path='*' element={<NotFoundPage />} />
             </Routes>
             <ImagePopup
                 isOpen={selectedCard}

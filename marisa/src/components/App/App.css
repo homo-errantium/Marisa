@@ -44,10 +44,10 @@ body {
     justify-content: space-between;
 }
 
-/*для sticker footer*/
+/* для sticker footer
 .main {
     flex-grow: 1;
-}
+} */
 
 * {
     margin: 0;

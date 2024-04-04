@@ -1,11 +1,11 @@
-import './AboutMe.css';
+import './AboutMePage.css';
 import React from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import authorImage from '../../images/main-info-image.jpg';
 import dessertImage from '../../images/main-bg.jpg';
 
-function AboutMe() {
+function AboutMePage() {
     return (
         <div className='wrapper'>
             <Header />
@@ -67,4 +67,4 @@ function AboutMe() {
     );
 }
 
-export default AboutMe;
+export default AboutMePage;
