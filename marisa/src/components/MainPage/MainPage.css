@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     background: #efefef; /*test*/
+    width: 100%;
 }
 
 .main_top {
@@ -29,7 +30,7 @@
     align-items: center;
     row-gap: 80px;
     margin-bottom: 92px;
-    max-width: 984px;
+    /* max-width: 984px; */
 }
 
 .main_bottom {

@@ -1,8 +1,8 @@
 import './FillingsContent.css';
-import cheeseCakeImage from '../../images/cheeseCakeImage.jpg';
-import brownyImage from '../../images/brownyImage.jpg';
-import cherryCakeImage from '../../images/cherryCakeImage.jpg';
-import appleCake from '../../images/appleCake.jpg';
+import cheeseCakeImage from '../../images/rolls/cheeseCakeImage.jpg';
+import brownyImage from '../../images/rolls/brownyImage.jpg';
+import cherryCakeImage from '../../images/rolls/cherryCakeImage.jpg';
+import appleCake from '../../images/rolls/appleCake.jpg';
 
 function FillingsContent() {
     return (

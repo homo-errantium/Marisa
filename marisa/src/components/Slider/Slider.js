@@ -1,9 +1,9 @@
 import './Slider.css';
-import { useState, useEffect, Children, cloneElement } from 'react';
+import { useState, useEffect, cloneElement } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Card from '../Card/Card';
 
-function Slider({ children, title }) {
+function Slider({ title, onCardClick, ...props }) {
     const PAGE_WIDTH = 400;
     const MARGIN_WIDTH = 20;
     const [pages, setPages] = useState([]);
@@ -28,24 +28,29 @@ function Slider({ children, title }) {
     }
 
     useEffect(() => {
+        console.log(props);
+        //вытаскиваем из пропс массив данных, создаем массив карточек
+        const cards = props.children.map((card) => (
+            <Card key={card.id} {...card} onCardClick={onCardClick} />
+        ));
+        //возвращаем массив карточек со стилями/рнедерим
         setPages(
-            Children.map(children, (child) => {
+            cards.map((child) => {
                 return cloneElement(child, {
                     style: {
-                        height: '100%',
+                        height: `${PAGE_WIDTH}px`,
                         minWidth: `${PAGE_WIDTH}px`,
                         maxWidth: `${PAGE_WIDTH}px`,
                     },
                 });
             })
         );
-
-        console.log(pages.length);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
-        <>
-            <h2 className='slider-title'>{title}</h2>
+        <div className='slider'>
+            <h2 className='slider__title'>{title}</h2>
             <div className='slider__container'>
                 <FaChevronLeft
                     className='slider__button'
@@ -64,7 +69,7 @@ function Slider({ children, title }) {
                     onClick={handleRightClick}
                 />
             </div>
-        </>
+        </div>
     );
 }
 

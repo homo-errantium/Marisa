@@ -1,9 +1,9 @@
 import './MenuContent.css';
 import MenuCard from '../MenuCard/MenuCard';
-import cardImage1 from '../../images/gallery1.jpg';
-import cardImage2 from '../../images/gallery2.jpg';
-import cardImage3 from '../../images/gallery3.jpg';
-import cardImage4 from '../../images/gallery4.jpg';
+import cardImage1 from '../../images/cakes/gallery1.jpg';
+import cardImage2 from '../../images/cakes/gallery2.jpg';
+import cardImage3 from '../../images/cakes/gallery3.jpg';
+import cardImage4 from '../../images/cakes/gallery4.jpg';
 
 function MenuContent() {
     return (

@@ -1,26 +1,23 @@
 import React from 'react';
+import './Card.css';
 
-function Card(cake) {
+function Card(card) {
     function handleClick() {
-        cake.onCardClick(cake);
+        card.onCardClick(card);
     }
 
     return (
-        <figure className='slide'>
+        <figure className='card'>
             <img
-                className='slider__image'
-                // вот так не работает
-                // src={require(`${cake.link}`)}
-                src={cake.link}
-                // а так работает
-                // src={require(`../../images/gallery1.jpg`)}
-                alt={cake.name}
-                title={cake.name}
+                className='card__image'
+                src={card.link}
+                alt={card.name}
+                title={card.name}
                 onClick={handleClick}
             />
 
-            <figcaption className='slider__info'>
-                <span className='slider__caption'>{cake.description}</span>
+            <figcaption className='card__info'>
+                <span className='card__caption'>{card.description}</span>
             </figcaption>
         </figure>
     );

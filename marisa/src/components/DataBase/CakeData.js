@@ -1,7 +1,7 @@
-import gallery1 from '../../images/gallery1.jpg';
-import gallery2 from '../../images/gallery2.jpg';
-import gallery3 from '../../images/gallery3.jpg';
-import gallery4 from '../../images/gallery4.jpg';
+import gallery1 from '../../images/cakes/gallery1.jpg';
+import gallery2 from '../../images/cakes/gallery2.jpg';
+import gallery3 from '../../images/cakes/gallery3.jpg';
+import gallery4 from '../../images/cakes/gallery4.jpg';
 
 export const Cakes = [
     {
@@ -30,7 +30,7 @@ export const Cakes = [
         name: 'Бисквитный',
         description:
             'Малиновый бисквит, малиновый ганаш, малиновый заварной крем, мятный крем. Состав: яйцо, сахар, мука, растительное масло, разрыхлитель, натуральное малиновое пюре, ягоды малины, листья мяты, желатин, белый шоколад, шоколадная хрустяшка, творожный сыр, сливки 33%.',
-        link: gallery1,
+        link: gallery4,
     },
     {
         id: 5,

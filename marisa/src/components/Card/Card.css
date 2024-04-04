@@ -1,15 +1,15 @@
-.slide {
+.card {
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 282px;
+    width: 100%;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 10px;
     background: linear-gradient(to top, #ccc 0%, #f6f6f6 75%, #fff 100%);
 }
 
-.slider__image {
+.card__image {
     width: 100%;
     height: 282px;
     object-fit: cover;
@@ -17,12 +17,12 @@
     transition: all 0.4s ease;
 }
 
-.slider__image:hover {
+.card__image:hover {
     opacity: 0.95;
     cursor: pointer;
 }
 
-.slider__info {
+.card__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +31,7 @@
     z-index: 1;
 }
 
-.slider__caption {
+.card__caption {
     width: 80%;
     margin: 0;
     overflow: hidden;
