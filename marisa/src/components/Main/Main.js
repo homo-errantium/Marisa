@@ -5,14 +5,14 @@ import MainTop from '../MainTop/MainTop';
 import MainMiddle from '../MainMiddle/MainMiddle';
 import MainBottom from '../MainBottom/MainBottom';
 
-function Main() {
+function Main(props) {
     return (
         <div className='wrapper'>
             <Header />
             <main className='main'>
                 <MainTop />
                 <MainMiddle />
-                <MainBottom />
+                <MainBottom onCardClick={props.onCardClick} />
             </main>
             <Footer />
         </div>

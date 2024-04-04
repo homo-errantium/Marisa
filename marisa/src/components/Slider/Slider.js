@@ -1,67 +1,70 @@
-import React, { useState } from 'react';
-import { SliderData } from './SliderData';
-// import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
+import { useState, useEffect, Children, cloneElement } from 'react';
 import './Slider.css';
-import leftArrow from '../../images/arrow-next-small-svgrepo-com (1).svg';
-import rightArrow from '../../images/arrow-next-small-svgrepo-com.svg';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
-const Slider = ({ slides }) => {
-    const [current, setCurrent] = useState(0);
-    const length = slides.length;
+function Slider({ children, title }) {
+    const PAGE_WIDTH = 400;
+    const MARGIN_WIDTH = 20;
+    const [pages, setPages] = useState([]);
+    const [offset, setOffset] = useState(0);
 
-    const nextSlide = () => {
-        setCurrent(current === length - 1 ? 0 : current + 1);
-    };
-
-    const prevSlide = () => {
-        setCurrent(current === 0 ? length - 1 : current - 1);
-    };
-
-    if (!Array.isArray(slides) || slides.length <= 0) {
-        return null;
+    function handleRightClick() {
+        setOffset(() => {
+            const newOffset = offset - PAGE_WIDTH - MARGIN_WIDTH;
+            const maxOffset = -(
+                (PAGE_WIDTH + MARGIN_WIDTH) *
+                (pages.length - 4)
+            );
+            return Math.max(newOffset, maxOffset);
+        });
     }
 
-    return (
-        <section className='slider'>
-            <button
-                className='slider__button slider__button_left'
-                onClick={prevSlide}
-            >
-                <img
-                    className='slider__button-img'
-                    src={leftArrow}
-                    alt='Arrow'
-                />
-            </button>
-            <button
-                className='slider__button slider__button_right'
-                onClick={nextSlide}
-            >
-                <img
-                    className='slider__button-img'
-                    src={rightArrow}
-                    alt='Arrow'
-                />
-            </button>
+    function handleLeftClick() {
+        setOffset(() => {
+            const newOffset = offset + PAGE_WIDTH + MARGIN_WIDTH;
+            return Math.min(newOffset, 0);
+        });
+    }
 
-            {SliderData.map((slide, index) => {
-                return (
+    useEffect(() => {
+        setPages(
+            Children.map(children, (child) => {
+                return cloneElement(child, {
+                    style: {
+                        height: '100%',
+                        minWidth: `${PAGE_WIDTH}px`,
+                        maxWidth: `${PAGE_WIDTH}px`,
+                    },
+                });
+            })
+        );
+
+        console.log(pages.length);
+    }, []);
+
+    return (
+        <>
+            <h2 className='slider-title'>{title}</h2>
+            <div className='slider__container'>
+                <FaChevronLeft
+                    className='slider__button'
+                    onClick={handleLeftClick}
+                />
+                <div className='slider__window'>
                     <div
-                        className={index === current ? 'slide active' : 'slide'}
-                        key={index}
+                        className='slider__slides'
+                        style={{ transform: `translateX(${offset}px)` }}
                     >
-                        {index === current && (
-                            <img
-                                src={slide.image}
-                                alt='cake'
-                                className='slider__image'
-                            />
-                        )}
+                        {pages}
                     </div>
-                );
-            })}
-        </section>
+                </div>
+                <FaChevronRight
+                    className='slider__button'
+                    onClick={handleRightClick}
+                />
+            </div>
+        </>
     );
-};
+}
 
 export default Slider;
