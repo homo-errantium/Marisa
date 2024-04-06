@@ -28,10 +28,14 @@ function Slider({ title, onCardClick, ...props }) {
     }
 
     useEffect(() => {
-        console.log(props);
         //вытаскиваем из пропс массив данных, создаем массив карточек
         const cards = props.children.map((card) => (
-            <Card key={card.id} {...card} onCardClick={onCardClick} />
+            <Card
+                key={card.id}
+                {...card}
+                onCardClick={onCardClick}
+                sliderTitle={title}
+            />
         ));
         //возвращаем массив карточек со стилями/рнедерим
         setPages(

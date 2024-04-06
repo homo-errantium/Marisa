@@ -1,79 +1,48 @@
 import './MenuContent.css';
-import MenuCard from '../MenuCard/MenuCard';
-import cardImage1 from '../../images/cakes/gallery1.jpg';
-import cardImage2 from '../../images/cakes/gallery2.jpg';
-import cardImage3 from '../../images/cakes/gallery3.jpg';
-import cardImage4 from '../../images/cakes/gallery4.jpg';
+import { Cakes } from '../DataBase/cakeData';
 
-function MenuContent() {
+function MenuContent({ onCardClick }) {
     return (
-        <section className='menu-content'>
-            <h1 className='menu-content__title'>
+        <section className='cakes'>
+            <h1 className='cakes__title'>
                 Заказывайте вкусные десерты ручной работы
             </h1>
+            <div className='cakes__gallery'>
+                {Cakes.map((cake) => {
+                    return (
+                        <figure className='cakes__card'>
+                            <img
+                                className='cakes__card-image'
+                                src={cake.image}
+                                alt={cake.name}
+                                title={cake.name}
+                                onClick={onCardClick}
+                            />
 
-            <ul className='menu-content__gallery'>
-                <MenuCard
-                    cardImageSrc={cardImage1}
-                    cardLink={'ya.ru'}
-                    cardTitle={'Tort1'}
-                />
-                <MenuCard
-                    cardImageSrc={cardImage2}
-                    cardLink={'ya.ru'}
-                    cardTitle={'Tort2'}
-                />
-                <MenuCard
-                    cardImageSrc={cardImage3}
-                    cardLink={'ya.ru'}
-                    cardTitle={'Tort1'}
-                />
-                <MenuCard
-                    cardImageSrc={cardImage4}
-                    cardLink={'ya.ru'}
-                    cardTitle={'Tort1'}
-                />
-                <MenuCard
-                    cardImageSrc={cardImage1}
-                    cardLink={'ya.ru'}
-                    cardTitle={'Tort1'}
-                />
-                <MenuCard
-                    cardImageSrc={cardImage2}
-                    cardLink={'ya.ru'}
-                    cardTitle={'Tort1'}
-                />
-                <MenuCard
-                    cardImageSrc={cardImage3}
-                    cardLink={'ya.ru'}
-                    cardTitle={'Tort1'}
-                />
-                <MenuCard
-                    cardImageSrc={cardImage4}
-                    cardLink={'ya.ru'}
-                    cardTitle={'Tort1'}
-                />
-                <MenuCard
-                    cardImageSrc={cardImage1}
-                    cardLink={'ya.ru'}
-                    cardTitle={'Tort1'}
-                />
-                <MenuCard
-                    cardImageSrc={cardImage2}
-                    cardLink={'ya.ru'}
-                    cardTitle={'Tort2'}
-                />
-                <MenuCard
-                    cardImageSrc={cardImage3}
-                    cardLink={'ya.ru'}
-                    cardTitle={'Tort1'}
-                />
-                <MenuCard
-                    cardImageSrc={cardImage4}
-                    cardLink={'ya.ru'}
-                    cardTitle={'Tort1'}
-                />
-            </ul>
+                            <figcaption className='cakes__info'>
+                                <span className='cakes__caption'>
+                                    {cake.name}
+                                </span>
+                                <div className='cakes__weight-container'>
+                                    <span className='cakes__weight-title'>
+                                        Вес
+                                    </span>
+                                    <span className='cakes__weight'>
+                                        {`${cake.weight} кг`}
+                                    </span>
+                                </div>
+                                <button
+                                    type='button'
+                                    onClick={alert('Thank you!')}
+                                    className='cakes__buy-button'
+                                >
+                                    Заказать
+                                </button>
+                            </figcaption>
+                        </figure>
+                    );
+                })}
+            </div>
         </section>
     );
 }

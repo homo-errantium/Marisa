@@ -14,7 +14,6 @@
     width: 100%;
     margin-bottom: 50px;
     padding: 80px 0 80px;
-    background-image: url('../../images/main-top-bg1.jpg');
     background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.5)),
         url('../../images/main-top-bg1.jpg');
     object-fit: contain;
@@ -28,8 +27,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 80px;
-    margin-bottom: 92px;
+    /* row-gap: 80px; */
+    /* margin-bottom: 92px; */
     /* max-width: 984px; */
 }
 
@@ -97,13 +96,19 @@
     color: #4d220e;
 }
 
-.main__button:hover {
+.main__order-button:hover {
     opacity: 0.7;
     cursor: pointer;
 }
 
-.main__button-image {
+.main__order-button-image {
     width: 16px;
     height: 16px;
     margin-right: 10px;
+}
+
+.main__middle-image {
+    width: 1600px;
+    height: 400px;
+    border-radius: 20px;
 }

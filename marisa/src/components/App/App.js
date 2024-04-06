@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
@@ -10,12 +11,22 @@ import ContactsPage from '../ContactsPage/ContactsPage';
 import ImagePopup from '../ImagePopup/ImagePopup';
 
 function App() {
-    const [selectedCard, setSelectedCard] = React.useState(null); //выбранная карточка
+    const [selectedCard, setSelectedCard] = useState(null); //выбранная карточка
 
     // закрытие попапа
     function closeAllPopups() {
         setSelectedCard(false);
     }
+
+    useEffect(() => {
+        const close = (e) => {
+            if (e.keyCode === 27) {
+                closeAllPopups();
+            }
+        };
+        window.addEventListener('keydown', close);
+        return () => window.removeEventListener('keydown', close);
+    }, []);
 
     // открытие попапа
     function openPopupViewer(card) {
@@ -29,7 +40,10 @@ function App() {
                     path='/'
                     element={<MainPage onCardClick={openPopupViewer} />}
                 />
-                <Route path='/menu' element={<MenuPage />} />
+                <Route
+                    path='/menu'
+                    element={<MenuPage onCardClick={openPopupViewer} />}
+                />
                 <Route path='/fillings' element={<FillingsPage />} />
                 <Route path='/about-me' element={<AboutMePage />} />
                 <Route path='/contacts' element={<ContactsPage />} />
