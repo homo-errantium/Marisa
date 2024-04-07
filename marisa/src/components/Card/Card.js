@@ -4,11 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import './Card.css';
 
 function Card(card) {
-    console.log(card);
     const location = useLocation();
     const navigate = useNavigate();
-
-    console.log(location);
 
     function handleClickViewe() {
         card.onCardClick(card);
