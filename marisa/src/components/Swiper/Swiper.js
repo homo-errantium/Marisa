@@ -31,6 +31,7 @@ function Swiper({ onCardClick, ...props }) {
             cards.map((child) => {
                 return (
                     <img
+                        key={child.id}
                         className='swiper__image'
                         src={`${child.link}`}
                         alt={`${child.name}`}

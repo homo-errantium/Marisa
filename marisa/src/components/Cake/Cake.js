@@ -22,7 +22,7 @@ function Cake(cake) {
                 </div>
                 <button
                     type='button'
-                    onClick={console.log('Thank you!')}
+                    // onClick={console.log('Thank you!')}
                     className='cake__buy-button'
                 >
                     Заказать

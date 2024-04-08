@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import './ImagePopup.css';
 
 function ImagePopup(props) {
+    console.log(props);
     const card = props.card;
     const [miniImages, setMiniImages] = useState([]);
 
@@ -10,7 +11,7 @@ function ImagePopup(props) {
         if (card) setMiniImages(card.revieweImages);
     }, [card]);
 
-    console.log(miniImages);
+    // console.log(miniImages);
     const [selectedImage, setSelectedImage] = useState(null); //выбранная карточка
 
     function vieweImage(event) {
@@ -18,11 +19,11 @@ function ImagePopup(props) {
     }
 
     return (
-        <div className={`popup  ${props.card ? 'popup_opened' : ''}`}>
+        <div className={`popup  ${card ? 'popup_opened' : ''}`}>
             <div className='popup__content'>
                 <div className='popup__cake-images'>
                     <img
-                        src={selectedImage ?? card.image}
+                        src={selectedImage ?? miniImages[0]}
                         alt={card ? card.name : ''}
                         className='popup__image'
                     />
@@ -30,6 +31,7 @@ function ImagePopup(props) {
                         {miniImages.map((image) => {
                             return (
                                 <img
+                                    key={image.id}
                                     className='popup__mini-image'
                                     src={image}
                                     alt={`фото ${card.name}`}
