@@ -20,11 +20,7 @@ function Cake(cake) {
                     <span className='cake__weight-title'>Вес</span>
                     <span className='cake__weight'>{`${cake.weight} кг`}</span>
                 </div>
-                <button
-                    type='button'
-                    // onClick={console.log('Thank you!')}
-                    className='cake__buy-button'
-                >
+                <button type='button' className='cake__buy-button'>
                     Заказать
                 </button>
             </figcaption>

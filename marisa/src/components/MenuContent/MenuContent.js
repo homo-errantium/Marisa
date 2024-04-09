@@ -1,5 +1,5 @@
 import './MenuContent.css';
-import { Cakes } from '../DataBase/cakeData';
+import { Cakes } from '../DataBase/CakeData';
 import Cake from '../Cake/Cake';
 
 function MenuContent({ onCardClick }) {
