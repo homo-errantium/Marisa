@@ -1,95 +1,23 @@
+import Filling from '../Filling/Filling';
 import './FillingsContent.css';
-import cheeseCakeImage from '../../images/rolls/cheeseCakeImage.jpg';
-import brownyImage from '../../images/rolls/brownyImage.jpg';
-import cherryCakeImage from '../../images/rolls/cherryCakeImage.jpg';
-import appleCake from '../../images/rolls/appleCake.jpg';
+import Fillings from '../DataBase/fillingsData';
 
-function FillingsContent() {
+function FillingsContent({ onCardClick }) {
     return (
-        <section className='fillingsContent'>
-            <div className='fillingsContent__info fillingsContent__info_left'>
-                <img
-                    src={cheeseCakeImage}
-                    alt='фото кондитера'
-                    className='fillingsContent__info-image'
-                />
-                <div className='fillingsContent__info-text'>
-                    <h2 className='fillingsContent__info-title'>Чизкейк</h2>
-                    <p className='fillingsContent__info-description'>
-                        Малиновый бисквит, малиновый ганаш, малиновый заварной
-                        крем, мятный крем.
-                    </p>
-                    <p className='fillingsContent__info-composition'>
-                        Состав: яйцо, сахар, мука, растительное масло,
-                        разрыхлитель, натуральное малиновое пюре, ягоды малины,
-                        листья мяты, желатин, белый шоколад, шоколадная
-                        хрустяшка, творожный сыр, сливки 33%.
-                    </p>
-                </div>
-            </div>
-            <div className='fillingsContent__info fillingsContent__info_right'>
-                <img
-                    src={brownyImage}
-                    alt='фото торта'
-                    className='fillingsContent__info-image'
-                />
-                <div className='fillingsContent__info-text'>
-                    <h2 className='fillingsContent__info-title'>
-                        Малиновый тортик
-                    </h2>
-                    <p className='fillingsContent__info-description'>
-                        Малиновый бисквит, малиновый ганаш, малиновый заварной
-                        крем, мятный крем.
-                    </p>
-                    <p className='fillingsContent__info-composition'>
-                        Состав: яйцо, сахар, мука, растительное масло,
-                        разрыхлитель, натуральное малиновое пюре, ягоды малины,
-                        листья мяты, желатин, белый шоколад, шоколадная
-                        хрустяшка, творожный сыр, сливки 33%.
-                    </p>
-                </div>
-            </div>
-            <div className='fillingsContent__info fillingsContent__info_left'>
-                <img
-                    src={cherryCakeImage}
-                    alt='фото торта'
-                    className='fillingsContent__info-image'
-                />
-                <div className='fillingsContent__info-text'>
-                    <h2 className='fillingsContent__info-title'>торт Брауни</h2>
-                    <p className='fillingsContent__info-description'>
-                        Малиновый бисквит, малиновый ганаш, малиновый заварной
-                        крем, мятный крем.
-                    </p>
-                    <p className='fillingsContent__info-composition'>
-                        Состав: яйцо, сахар, мука, растительное масло,
-                        разрыхлитель, натуральное малиновое пюре, ягоды малины,
-                        листья мяты, желатин, белый шоколад, шоколадная
-                        хрустяшка, творожный сыр, сливки 33%.
-                    </p>
-                </div>
-            </div>
-            <div className='fillingsContent__info fillingsContent__info_right'>
-                <img
-                    src={appleCake}
-                    alt=''
-                    className='fillingsContent__info-image'
-                />
-                <div className='fillingsContent__info-text'>
-                    <h2 className='fillingsContent__info-title'>
-                        Меренговый рулет
-                    </h2>
-                    <p className='fillingsContent__info-description'>
-                        Малиновый бисквит, малиновый ганаш, малиновый заварной
-                        крем, мятный крем.
-                    </p>
-                    <p className='fillingsContent__info-composition'>
-                        Состав: яйцо, сахар, мука, растительное масло,
-                        разрыхлитель, натуральное малиновое пюре, ягоды малины,
-                        листья мяты, желатин, белый шоколад, шоколадная
-                        хрустяшка, творожный сыр, сливки 33%.
-                    </p>
-                </div>
+        <section className='fillings'>
+            <h1 className='fillings__title'>
+                Заказывайте вкусные десерты ручной работы
+            </h1>
+            <div className='fillings__gallery'>
+                {Fillings.map((filling) => {
+                    return (
+                        <Filling
+                            key={filling.id}
+                            {...filling}
+                            onCardClick={onCardClick}
+                        />
+                    );
+                })}
             </div>
         </section>
     );

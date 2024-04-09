@@ -15,6 +15,22 @@ function Card(card) {
         navigate(`${card.link}`, { replace: true });
     }
 
+    function handleClick() {
+        switch (location) {
+            case '/':
+                handleClickNavigate();
+                break;
+            case '/menu':
+                handleClickViewe();
+                break;
+
+            case '/fillings':
+                handleClickViewe();
+                break;
+            default:
+                console.log('wrong path');
+        }
+    }
     return (
         <figure className='card'>
             <img
@@ -22,9 +38,7 @@ function Card(card) {
                 src={card.image}
                 alt={card.name}
                 title={card.name}
-                onClick={
-                    location === '/' ? handleClickViewe : handleClickNavigate
-                }
+                onClick={handleClick}
             />
 
             <figcaption className='card__info'>

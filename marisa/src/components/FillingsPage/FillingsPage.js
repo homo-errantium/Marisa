@@ -2,14 +2,15 @@ import './FillingsPage.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import FillingsContent from '../FillingsContent/FillingsContent';
+import Main from '../Main/Main';
 
-function FillingsPage() {
+function FillingsPage({ onCardClick }) {
     return (
         <div className='wrapper'>
             <Header />
-            <main className='main'>
+            <Main>
                 <FillingsContent />
-            </main>
+            </Main>
             <Footer />
         </div>
     );

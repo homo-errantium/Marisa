@@ -17,7 +17,7 @@ function App() {
     function closeAllPopups() {
         setSelectedCard(false);
     }
-
+    // закрытие попапа по клавише Esc
     useEffect(() => {
         const close = (e) => {
             if (e.keyCode === 27) {
@@ -44,7 +44,10 @@ function App() {
                     path='/menu'
                     element={<MenuPage onCardClick={openPopupViewer} />}
                 />
-                <Route path='/fillings' element={<FillingsPage />} />
+                <Route
+                    path='/fillings'
+                    element={<FillingsPage onCardClick={openPopupViewer} />}
+                />
                 <Route path='/about-me' element={<AboutMePage />} />
                 <Route path='/contacts' element={<ContactsPage />} />
                 <Route path='*' element={<NotFoundPage />} />
