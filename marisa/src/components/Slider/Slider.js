@@ -37,7 +37,7 @@ function Slider({ title, onCardClick, ...props }) {
                 sliderTitle={title}
             />
         ));
-        //возвращаем массив карточек со стилями/рнедерим
+        //возвращаем массив карточек со стилями/рендерим
         setPages(
             cards.map((child) => {
                 return cloneElement(child, {

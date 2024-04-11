@@ -1,6 +1,6 @@
-import Filling from '../Filling/Filling';
+import FillingCard from '../../Card/FillingCard/FillingCard';
 import './FillingsContent.css';
-import Fillings from '../DataBase/fillingsData';
+import Fillings from '../../DataBase/fillingsData';
 
 function FillingsContent({ onCardClick }) {
     return (
@@ -11,7 +11,7 @@ function FillingsContent({ onCardClick }) {
             <div className='fillings__gallery'>
                 {Fillings.map((filling) => {
                     return (
-                        <Filling
+                        <FillingCard
                             key={filling.id}
                             {...filling}
                             onCardClick={onCardClick}

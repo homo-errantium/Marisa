@@ -11,12 +11,18 @@ import ContactsPage from '../ContactsPage/ContactsPage';
 import ImagePopup from '../ImagePopup/ImagePopup';
 
 function App() {
-    const [selectedCard, setSelectedCard] = useState(null); //выбранная карточка
+    //выбранная карточка
+    const [selectedCard, setSelectedCard] = useState(null);
 
+    // открытие попапа
+    function openPopupViewer(card) {
+        setSelectedCard(card);
+    }
     // закрытие попапа
     function closeAllPopups() {
         setSelectedCard(false);
     }
+
     // закрытие попапа по клавише Esc
     useEffect(() => {
         const close = (e) => {
@@ -27,11 +33,6 @@ function App() {
         window.addEventListener('keydown', close);
         return () => window.removeEventListener('keydown', close);
     }, []);
-
-    // открытие попапа
-    function openPopupViewer(card) {
-        setSelectedCard(card);
-    }
 
     return (
         <div className='page'>

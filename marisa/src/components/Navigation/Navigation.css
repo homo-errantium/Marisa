@@ -23,6 +23,10 @@
     color: #cfa2bc;
 }
 
+.navigation__link.active {
+    color: #cfa2bc;
+}
+
 .navigation__link:not(:last-child) {
     margin-right: 17px;
 }

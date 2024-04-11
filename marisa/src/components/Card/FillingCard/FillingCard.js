@@ -1,8 +1,8 @@
-import './Filling.css';
+import './FillingCard.css';
 
 //карточка начинки
 
-function Filling(filling) {
+function FillingCard(filling) {
     function handleClickViewe() {
         filling.onCardClick(filling);
     }
@@ -21,4 +21,5 @@ function Filling(filling) {
     );
 }
 
-export default Filling;
+export default FillingCard;
+//

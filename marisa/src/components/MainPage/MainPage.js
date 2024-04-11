@@ -3,9 +3,8 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Main from '../Main/Main';
 import Slider from '../Slider/Slider';
+import Swiper from '../Slider/Swiper/Swiper';
 import { NaviogationCards } from '../DataBase/navigationData';
-
-import Swiper from '../Swiper/Swiper';
 import { actionsImage } from '../DataBase/actionsData';
 
 function MainPage({ onCardClick }) {
@@ -26,9 +25,7 @@ function MainPage({ onCardClick }) {
                         </Swiper>
                     </section>
                     <section className='main main_bottom'>
-                        <Slider title={''} onCardClick={onCardClick}>
-                            {NaviogationCards}
-                        </Slider>
+                        <Slider>{NaviogationCards}</Slider>
                     </section>
                 </>
             </Main>

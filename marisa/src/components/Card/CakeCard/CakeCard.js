@@ -1,6 +1,6 @@
-import './Cake.css';
+import './CakeCard.css';
 
-function Cake(cake) {
+function CakeCard(cake) {
     function handleClickViewe() {
         cake.onCardClick(cake);
     }
@@ -28,4 +28,4 @@ function Cake(cake) {
     );
 }
 
-export default Cake;
+export default CakeCard;

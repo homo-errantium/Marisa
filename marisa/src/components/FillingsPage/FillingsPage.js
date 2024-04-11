@@ -1,7 +1,7 @@
 import './FillingsPage.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import FillingsContent from '../FillingsContent/FillingsContent';
+import FillingsContent from './FillingsContent/FillingsContent';
 import Main from '../Main/Main';
 
 function FillingsPage({ onCardClick }) {
@@ -9,7 +9,7 @@ function FillingsPage({ onCardClick }) {
         <div className='wrapper'>
             <Header />
             <Main>
-                <FillingsContent />
+                <FillingsContent onCardClick={onCardClick} />
             </Main>
             <Footer />
         </div>

@@ -1,22 +1,24 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './Card.css';
 
 function Card(card) {
     const location = useLocation();
     const navigate = useNavigate();
 
+    //функция просмотра - вызова попапа просмотра
     function handleClickViewe() {
         card.onCardClick(card);
     }
 
+    //функция переадресации
     function handleClickNavigate() {
         navigate(`${card.link}`, { replace: true });
     }
 
+    // выбор функции в зависимости от расположения карточки
     function handleClick() {
-        switch (location) {
+        switch (location.pathname) {
             case '/':
                 handleClickNavigate();
                 break;
@@ -31,6 +33,7 @@ function Card(card) {
                 console.log('wrong path');
         }
     }
+
     return (
         <figure className='card'>
             <img

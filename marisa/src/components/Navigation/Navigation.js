@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import './Navigation.css';
 
@@ -17,21 +17,21 @@ function Navigation() {
         <div className='navigation'>
             <>
                 <nav className='navigation__links'>
-                    <Link to='/' className='navigation__link'>
+                    <NavLink to='/' className='navigation__link'>
                         Главная
-                    </Link>
-                    <Link to='/menu' className='navigation__link'>
+                    </NavLink>
+                    <NavLink to='/menu' className='navigation__link'>
                         Торты
-                    </Link>
-                    <Link to='/fillings' className='navigation__link'>
+                    </NavLink>
+                    <NavLink to='/fillings' className='navigation__link'>
                         Начинки
-                    </Link>
-                    <Link to='/about-me' className='navigation__link'>
+                    </NavLink>
+                    <NavLink to='/about-me' className='navigation__link'>
                         Обо мне
-                    </Link>
-                    <Link to='/contacts' className='navigation__link'>
+                    </NavLink>
+                    <NavLink to='/contacts' className='navigation__link'>
                         Контакты
-                    </Link>
+                    </NavLink>
                 </nav>
                 <button
                     type='button'

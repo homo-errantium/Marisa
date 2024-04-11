@@ -1,76 +1,60 @@
 import React, { useEffect, useState } from 'react';
-
+import CakePopup from './CakePopup/CakePopup';
+import FillingPopup from './FillingPopup/FillingPopup';
+import { useLocation } from 'react-router-dom';
 import './ImagePopup.css';
 
-function ImagePopup(props) {
+function ImagePopup({ isOpen, card, onClose }) {
     const [miniImages, setMiniImages] = useState([]);
-    const [selectedImage, setSelectedImage] = useState(miniImages[0]); //выбранная карточка
+    const [selectedImage, setSelectedImage] = useState(miniImages[0]);
+    const location = useLocation();
 
-    function closePopup() {
-        props.onClose();
-        setSelectedImage(null);
-    }
-
+    //ф-я для просмотра мини-изображений
     function vieweImage(event) {
         setSelectedImage(event.target.src);
     }
 
-    const card = props.card;
+    //ф-я закрытия попап и очистки текущей карточки
+    function closeMultiImagePopup() {
+        onClose();
+        setSelectedImage(null);
+    }
 
+    // взятие массива мини изображений
     useEffect(() => {
-        if (card) setMiniImages(card.revieweImages);
+        if (location.pathname === '/menu' && card)
+            setMiniImages(card.revieweImages);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [card]);
 
-    return (
-        <div className={`popup  ${card ? 'popup_opened' : ''}`}>
-            <div className='popup__content'>
-                <div className='popup__cake-images'>
-                    <img
-                        src={selectedImage ?? miniImages[0]} // если не выбран ни один слайд, то исходным сделать первый из мини изобржений
-                        alt={card ? card.name : ''}
-                        className='popup__image'
+    //ф-я выбора типа попапа в зависимости от расположения попапа
+    function handleChangeChild() {
+        switch (location.pathname) {
+            case '/menu':
+                return (
+                    <CakePopup
+                        selectedImage={selectedImage}
+                        miniImages={miniImages}
+                        card={card}
+                        vieweImage={vieweImage}
                     />
-                    <div className='popup__mini-images-container'>
-                        {miniImages.map((image, key) => {
-                            return (
-                                <img
-                                    key={key}
-                                    className={`popup__mini-image ${
-                                        selectedImage &&
-                                        image.slice(-10) ===
-                                            selectedImage.slice(-10) &&
-                                        'popup__mini-image_selected' // выделить тот слайд, чей адрес совпадает с главным
-                                    }`}
-                                    src={image}
-                                    alt={`фото ${card.name}`}
-                                    onClick={vieweImage}
-                                />
-                            );
-                        })}
-                    </div>
-                </div>
+                );
+            case '/fillings':
+                return <FillingPopup card={card} />;
+            default:
+                console.log('wrong path');
+        }
+    }
 
-                <div className='popup__cake-text'>
-                    <div className='popup__cake-text-container'>
-                        <span className='popup__cake-title'>
-                            {card ? card.name : ''}
-                        </span>
-                        <p className='popup__description'>
-                            <span className='popup__description popup__description_first-word'>
-                                Состав:
-                            </span>
-                            {` ${card ? card.description : ''}`}
-                        </p>
-                    </div>
-                    <button className='popup__button' type='button'>
-                        Заказать
-                    </button>
-                </div>
+    return (
+        <div className={`popup  ${isOpen ? 'popup_opened' : ''}`}>
+            <div className='popup__content'>
+                {handleChangeChild()}
 
                 <button
                     type='button'
                     className='popup__btn-close'
-                    onClick={closePopup}
+                    onClick={closeMultiImagePopup}
                 ></button>
             </div>
         </div>

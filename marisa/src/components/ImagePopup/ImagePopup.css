@@ -30,7 +30,7 @@
     box-shadow: 5px 5px 20px 10px #494949;
 }
 
-.popup__cake-images {
+.popup__images {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -70,7 +70,7 @@
     padding: 3px;
 }
 
-.popup__cake-text {
+.popup__text {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -78,7 +78,7 @@
     align-items: center;
 }
 
-.popup__cake-text-container {
+.popup__text-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -86,7 +86,7 @@
     height: 100%;
 }
 
-.popup__cake-title {
+.popup__title {
     font-size: 25px;
     font-weight: 600;
     font-family: 'Montserrat', 'Arial', 'sans-serif';

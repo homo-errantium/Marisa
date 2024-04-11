@@ -1,6 +1,6 @@
 import './MenuContent.css';
-import { Cakes } from '../DataBase/CakeData';
-import Cake from '../Cake/Cake';
+import { Cakes } from '../../DataBase/CakeData';
+import CakeCard from '../../Card/CakeCard/CakeCard';
 
 function MenuContent({ onCardClick }) {
     return (
@@ -11,7 +11,7 @@ function MenuContent({ onCardClick }) {
             <div className='cakes__gallery'>
                 {Cakes.map((cake) => {
                     return (
-                        <Cake
+                        <CakeCard
                             key={cake.id}
                             {...cake}
                             onCardClick={onCardClick}
