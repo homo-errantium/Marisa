@@ -16,6 +16,7 @@ function ImagePopup({ isOpen, card, onClose }) {
 
     //ф-я закрытия попап и очистки текущей карточки
     function closeMultiImagePopup() {
+        console.log('its buy');
         onClose();
         setSelectedImage(null);
     }
@@ -42,7 +43,7 @@ function ImagePopup({ isOpen, card, onClose }) {
             case '/fillings':
                 return <FillingPopup card={card} />;
             default:
-                console.log('wrong path');
+                break;
         }
     }
 

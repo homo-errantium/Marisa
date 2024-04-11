@@ -1,6 +1,7 @@
 import './Swiper.css';
 import { useState, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import SwiperCard from '../Card/SwiperCard/SwiperCard';
 
 function Swiper({ onCardClick, ...props }) {
     const PAGE_WIDTH = 1300;
@@ -28,19 +29,8 @@ function Swiper({ onCardClick, ...props }) {
 
         //возвращаем массив карточек со стилями/рнедерим
         setPages(
-            cards.map((child) => {
-                return (
-                    <img
-                        key={child.id}
-                        className='swiper__image'
-                        src={`${child.link}`}
-                        alt={`${child.name}`}
-                        // onClick={onCardClick}
-                        style={{
-                            width: `${PAGE_WIDTH}px`,
-                        }}
-                    />
-                );
+            cards.map((card) => {
+                return <SwiperCard card={card} pageWidth={PAGE_WIDTH} />;
             })
         );
         // eslint-disable-next-line react-hooks/exhaustive-deps

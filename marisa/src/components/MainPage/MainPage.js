@@ -3,7 +3,7 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Main from '../Main/Main';
 import Slider from '../Slider/Slider';
-import Swiper from '../Slider/Swiper/Swiper';
+import Swiper from '../Swiper/Swiper';
 import { NaviogationCards } from '../DataBase/navigationData';
 import { actionsImage } from '../DataBase/actionsData';
 

@@ -22,4 +22,3 @@ function FillingCard(filling) {
 }
 
 export default FillingCard;
-//

@@ -23,15 +23,22 @@ function App() {
         setSelectedCard(false);
     }
 
-    // закрытие попапа по клавише Esc
+    // закрытие попапа по клавише Esc или по клику вне области
     useEffect(() => {
         const close = (e) => {
-            if (e.keyCode === 27) {
+            if (
+                e.keyCode === 27 ||
+                e.target.classList.contains('popup_opened')
+            ) {
                 closeAllPopups();
             }
         };
         window.addEventListener('keydown', close);
-        return () => window.removeEventListener('keydown', close);
+        window.addEventListener('click', close);
+        return () => {
+            window.removeEventListener('keydown', close);
+            window.removeEventListener('click', close);
+        };
     }, []);
 
     return (

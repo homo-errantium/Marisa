@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import './Card.css';
+import './SliderCard.css';
 
 function Card(card) {
     const location = useLocation();

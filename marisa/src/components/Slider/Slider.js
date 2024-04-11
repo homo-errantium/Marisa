@@ -1,7 +1,7 @@
 import './Slider.css';
 import { useState, useEffect, cloneElement } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import Card from '../Card/Card';
+import SliderCard from '../Card/SliderCard/SliderCard';
 
 function Slider({ title, onCardClick, ...props }) {
     const PAGE_WIDTH = 400;
@@ -30,7 +30,7 @@ function Slider({ title, onCardClick, ...props }) {
     useEffect(() => {
         //вытаскиваем из пропс массив данных, создаем массив карточек
         const cards = props.children.map((card) => (
-            <Card
+            <SliderCard
                 key={card.id}
                 {...card}
                 onCardClick={onCardClick}

@@ -7,7 +7,7 @@ function FillingPopup({ card }) {
                 <img
                     src={card ? card.image : ''}
                     alt={card ? card.name : ''}
-                    className='popup__image'
+                    className='popup__image popup__image_filling'
                 />
             </div>
 
@@ -23,9 +23,6 @@ function FillingPopup({ card }) {
                         {` ${card ? card.description : ''}`}
                     </p>
                 </div>
-                <button className='popup__button' type='button'>
-                    Заказать
-                </button>
             </div>
         </>
     );
