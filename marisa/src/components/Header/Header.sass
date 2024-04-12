@@ -11,6 +11,7 @@
     align-items: center
     width: 100%
     padding: 18px 70px
+    position: relative
 
     &__logo:hover 
         opacity: 0.8
@@ -19,7 +20,22 @@
         height: 60px
         width: 90px
         border-radius: 50%
+    
+    &__info
+        position: absolute
+        right: 5vw
 
+    &__info-phone
+        text-decoration: none
+        margin-right: 40px
+        color:$text-color-brown
+
+    &__info-worktime
+        color:$text-color-brown
+        margin-right: 40px
+
+    &__info-city
+        color:$text-color-brown
 
 @media (max-width: 768px) 
     .header 

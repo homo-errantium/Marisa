@@ -1,4 +1,4 @@
-import './Slider.css';
+import './Slider.sass';
 import { useState, useEffect, cloneElement } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import SliderCard from '../Card/SliderCard/SliderCard';

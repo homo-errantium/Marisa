@@ -7,7 +7,7 @@ function CakePopup({ selectedImage, miniImages, card, vieweImage }) {
                 <img
                     src={selectedImage ?? miniImages[0]}
                     alt={card ? card.name : ''}
-                    className='popup__image'
+                    className='popup__image popup__image_cake'
                 />
                 <div className='popup__mini-images-container'>
                     {miniImages.map((image, key) => {

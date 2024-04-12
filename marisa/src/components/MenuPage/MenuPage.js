@@ -1,4 +1,4 @@
-import './MenuPage.css';
+import './MenuPage.sass';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import MenuContent from './MenuContent/MenuContent';

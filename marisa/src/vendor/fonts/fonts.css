@@ -33,3 +33,21 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    src: url('./cinzel/Cinzel-Regular.woff2') format('woff2'),
+        url('./cinzel/Cinzel-Regular.woff') format('woff');
+    font-family: 'Cinzel';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    src: url('./cinzel/Cinzel-Medium.woff2') format('woff2'),
+        url('./cinzel/Cinzel-Medium.woff') format('woff');
+    font-family: 'Cinzel';
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}

@@ -30,7 +30,13 @@ function Swiper({ onCardClick, ...props }) {
         //возвращаем массив карточек со стилями/рнедерим
         setPages(
             cards.map((card) => {
-                return <SwiperCard card={card} pageWidth={PAGE_WIDTH} />;
+                return (
+                    <SwiperCard
+                        key={card.id}
+                        card={card}
+                        pageWidth={PAGE_WIDTH}
+                    />
+                );
             })
         );
         // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -1,12 +1,12 @@
+@import '../../App/_mixins'
 @import '../../App/_var'
     
-.fillings 
+.cakes 
+    @include flex-col
     padding-top: 20px
     padding-bottom: 60px
-    display: flex
-    flex-direction: column
     align-items: center
-
+    
     &__title 
         text-align: center
         font-size: 30px
@@ -15,9 +15,7 @@
         text-transform: uppercase
         margin-bottom: 20px
         max-width: 500px
-        font-family: $monts-font
         color: $text-color-brown
-
 
     &__gallery 
         /* column-gap: 50px */

@@ -2,7 +2,6 @@ import './ContactsPage.sass';
 import React from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import cherryCakeImage from '../../images/main-info-image.jpg';
 import logoVk from '../../images/vkontakte-image5.svg';
 import logoTelegram from '../../images/telegram-image5.svg';
 import logoEmail from '../../images/email-image5.svg';
@@ -16,11 +15,11 @@ function ContactsPage() {
             <main className='main'>
                 <section className='contacts'>
                     <div className='contacts__info contacts__info_left'>
-                        <img
+                        {/* <img
                             src={cherryCakeImage}
                             alt='фото кондитера'
                             className='contacts__info-image'
-                        />
+                        /> */}
                         <div className='contacts__info-text'>
                             <h2 className='contacts__info-title'>
                                 СВЯЗАТЬСЯ СО МНОЙ

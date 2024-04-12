@@ -1,4 +1,4 @@
-import './MenuContent.css';
+import './MenuContent.sass';
 import { Cakes } from '../../DataBase/CakeData';
 import CakeCard from '../../Card/CakeCard/CakeCard';
 

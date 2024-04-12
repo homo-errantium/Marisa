@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
-import './Navigation.css';
+import './Navigation.sass';
+// import './Navigation.css';
 
 function Navigation() {
     const [isClicked, setIsClicked] = useState(false);
@@ -33,6 +34,7 @@ function Navigation() {
                         Контакты
                     </NavLink>
                 </nav>
+
                 <button
                     type='button'
                     className='navigation__burger-button'
