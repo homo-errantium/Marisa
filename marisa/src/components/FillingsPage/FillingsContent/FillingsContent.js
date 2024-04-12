@@ -1,5 +1,5 @@
 import FillingCard from '../../Card/FillingCard/FillingCard';
-import './FillingsContent.css';
+import './FillingsContent.sass';
 import Fillings from '../../DataBase/fillingsData';
 
 function FillingsContent({ onCardClick }) {

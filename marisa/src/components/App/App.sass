@@ -1,0 +1,51 @@
+@import './_var'
+@import './_mixins'
+
+body 
+    height: 100%
+    background-color:  $bg-color-primary
+    color: $text-color-dark
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.5)),
+        url:('../../images/main-bg1.jpg')
+    object-fit: contain
+    background-size: cover
+    background-repeat: no-repeat
+    background-attachment: fixed
+    background-position: top 
+
+.page 
+    @include flex-col
+    @include font-main
+    min-width: 320px
+    min-height: 100%
+    margin: 0 auto
+    width: 100%
+    font-family: $monts-font
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    -webkit-text-size-adjust: 100%
+    -ms-text-size-adjust: 100%
+    -moz-text-size-adjust: 100%
+
+
+/* для sticker footer */
+.wrapper 
+    @include flex-col
+    height: 100vh
+    justify-content: space-between
+
+
+/* для sticker footer*/
+.main 
+    flex-grow: 1
+ 
+
+* 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+
+// * 
+//     border: 1px solid violet
+ 

@@ -1,4 +1,4 @@
-import './SwiperCard.css';
+import './SwiperCard.sass';
 
 function SwiperCard({ pageWidth, card }) {
     return (

@@ -1,4 +1,4 @@
-import './FillingCard.css';
+import './FillingCard.sass';
 
 //карточка начинки
 

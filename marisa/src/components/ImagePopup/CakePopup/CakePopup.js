@@ -1,4 +1,4 @@
-import './CakePopup.css';
+import './CakePopup.sass';
 
 function CakePopup({ selectedImage, miniImages, card, vieweImage }) {
     return (

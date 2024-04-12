@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CakePopup from './CakePopup/CakePopup';
 import FillingPopup from './FillingPopup/FillingPopup';
 import { useLocation } from 'react-router-dom';
-import './ImagePopup.css';
+import './ImagePopup.sass';
 
 function ImagePopup({ isOpen, card, onClose }) {
     const [miniImages, setMiniImages] = useState([]);

@@ -1,4 +1,4 @@
-import './CakeCard.css';
+import './CakeCard.sass';
 
 function CakeCard(cake) {
     function handleClickViewe() {

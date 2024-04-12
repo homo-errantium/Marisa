@@ -1,4 +1,4 @@
-import './FillingsPage.css';
+import './FillingsPage.sass';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import FillingsContent from './FillingsContent/FillingsContent';

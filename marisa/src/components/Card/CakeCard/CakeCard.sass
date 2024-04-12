@@ -1,0 +1,59 @@
+@import '../../App/_var'
+@import '../../App/_mixins'
+
+.cake
+    &__card 
+        width: 400px
+        height: 480px
+        border-radius: 15px
+        overflow: hidden
+        border: $border
+
+    &__card-image 
+        width: 100%
+        height: 60%
+        object-fit: cover
+        object-position: center center
+
+    &__card-image:hover 
+        cursor: pointer
+
+    &__info
+        @include flex-col 
+        padding: 15px
+        justify-content: space-between
+        gap: 25px
+
+    &__caption 
+        font-size: 25px
+        font-weight: 600
+        font-family: $monts-font
+
+
+    &__weight-container 
+        display: flex
+        justify-content: space-between
+
+
+    &__weight-title 
+        font-size: 20px
+        font-weight: 500
+        font-family: $monts-font
+
+
+    &__buy-button 
+        padding: 15px 0 15px 0
+        border-radius: 15px
+        background-color: $bg-color-secondary
+        color: $text-color-light
+        border: none
+        text-transform: uppercase
+        font-size: 18px
+        letter-spacing: 2.5px
+
+
+    &__buy-button:hover 
+        opacity: 0.6
+        cursor: pointer
+        color: $text-color-hover
+

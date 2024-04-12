@@ -1,0 +1,87 @@
+@import '../App/_mixins'
+@import '../App/_var'
+    
+.footer 
+    flex-grow: 0
+    flex-shrink: 0
+    box-sizing: border-box
+    background: $bg-color-secondary
+    display: flex
+    flex-direction: column-reverse
+    align-items: center
+    width: 100%
+    padding: 18px 70px
+
+    &__author 
+        font-size: 12px
+        font-weight: 400
+        text-decoration: none
+        color: $text-color-light
+
+    &__link 
+        font-family: $monts-font
+        text-decoration: none
+        color: $text-color-hover
+        font-size: 14px
+        font-weight: 400
+        letter-spacing: 0.1em
+        text-transform: uppercase
+
+    &__link:hover 
+        opacity: 0.7
+        cursor: pointer
+
+    &__item:last-child 
+        margin: 0
+
+    &__links 
+        list-style: none
+        display: flex
+        justify-content: space-between
+        margin-bottom: 15px
+
+    &__item 
+        margin-right: 50px
+
+
+    &__image 
+        width: 30px
+        height: 30px
+        filter: invert(97%) sepia(100%) saturate(0%) hue-rotate(53deg) brightness(104%) contrast(107%)
+
+
+@media (max-width: 768px) 
+    .footer 
+        padding: 60px 30px 20px
+    
+
+
+@media (max-width: 320px) 
+    .footer 
+        padding: 60px 10px 20px
+        
+        &__info 
+            flex-direction: column-reverse
+            justify-content: space-between
+            align-items: center
+        
+        &__links 
+            flex-direction: column
+            align-items: center
+            gap: 8px
+            margin-bottom: 29px
+        
+        &__link 
+            font-size: 12px
+            font-style: normal
+            font-weight: 400
+            margin: 0
+        
+        &__author 
+            font-family: $monts-font
+            font-size: 12px
+        
+        &__item 
+            margin: 0
+            padding: 0
+            list-style: none

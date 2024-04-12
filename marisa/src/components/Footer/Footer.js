@@ -1,4 +1,4 @@
-import './Footer.css';
+import './Footer.sass';
 import logoVk from '../../images/vkontakte-image5.svg';
 import logoTelegram from '../../images/telegram-image5.svg';
 import logoEmail from '../../images/email-image5.svg';

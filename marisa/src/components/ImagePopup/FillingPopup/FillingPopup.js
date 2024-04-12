@@ -1,4 +1,4 @@
-import './FillingPopup.css';
+import './FillingPopup.sass';
 
 function FillingPopup({ card }) {
     return (

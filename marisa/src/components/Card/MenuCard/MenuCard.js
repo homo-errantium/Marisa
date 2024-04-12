@@ -1,5 +1,5 @@
 import React from 'react';
-import './MenuCard.css';
+import './MenuCard.sass';
 
 function MenuCard(props) {
     return (

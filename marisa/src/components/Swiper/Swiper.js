@@ -1,4 +1,4 @@
-import './Swiper.css';
+import './Swiper.sass';
 import { useState, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import SwiperCard from '../Card/SwiperCard/SwiperCard';

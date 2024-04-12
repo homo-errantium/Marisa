@@ -1,0 +1,14 @@
+@mixin font-main()
+  font-style: normal
+  line-height: normal
+
+@mixin flex-col()
+  display: flex
+  flex-direction: column
+
+@mixin border-radius($radius)         // Префиксы для:
+  -webkit-border-radius: $radius    // Chrome и Safari
+  -moz-border-radius: $radius    // Firefox
+  -ms-border-radius: $radius    // Internet Explorer
+  -o-border-radius: $radius    // Opera
+  border-radius: $radius    // Стандартный CSS
