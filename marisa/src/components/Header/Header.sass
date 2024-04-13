@@ -7,35 +7,44 @@
     box-sizing: border-box
     background: $bg-color-secondary
     display: flex
-    justify-content: center
+    justify-content: space-between
     align-items: center
     width: 100%
     padding: 18px 70px
-    position: relative
+    // position: relative
 
+    &__logo
+        width: 90px
+        height: 60px
+        border-radius: 50%
+        overflow: hidden
+        text-decoration: none
+    
     &__logo:hover 
         opacity: 0.8
 
     &__logo-image 
-        height: 60px
-        width: 90px
-        border-radius: 50%
+        width: 100%
+        height: 100%
     
     &__info
-        position: absolute
-        right: 5vw
+        @include flex-col
+        align-items: flex-end
+        gap: 5px
 
     &__info-phone
         text-decoration: none
-        margin-right: 40px
+        // margin-right: 40px
         color:$text-color-brown
 
     &__info-worktime
         color:$text-color-brown
-        margin-right: 40px
+        // margin-right: 40px
+        font-size: 12px
 
     &__info-city
         color:$text-color-brown
+        font-size: 12px
 
 @media (max-width: 768px) 
     .header 

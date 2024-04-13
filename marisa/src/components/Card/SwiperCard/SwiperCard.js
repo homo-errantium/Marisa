@@ -7,9 +7,9 @@ function SwiperCard({ pageWidth, card }) {
             className='swiper__image'
             src={`${card.link}`}
             alt={`${card.name}`}
-            style={{
-                width: `${pageWidth}px`,
-            }}
+            // style={{
+            //     width: `${pageWidth}vw`,
+            // }}
         />
     );
 }

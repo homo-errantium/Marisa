@@ -4,8 +4,8 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import SliderCard from '../Card/SliderCard/SliderCard';
 
 function Slider({ title, onCardClick, ...props }) {
-    const PAGE_WIDTH = 400;
-    const MARGIN_WIDTH = 20;
+    const PAGE_WIDTH = 15;
+    const MARGIN_WIDTH = PAGE_WIDTH * 0.15;
     const [pages, setPages] = useState([]);
     const [offset, setOffset] = useState(0);
 
@@ -35,18 +35,15 @@ function Slider({ title, onCardClick, ...props }) {
                 {...card}
                 onCardClick={onCardClick}
                 sliderTitle={title}
+                style={{
+                    width: `${PAGE_WIDTH}vw`,
+                }}
             />
         ));
         //возвращаем массив карточек со стилями/рендерим
         setPages(
             cards.map((child) => {
-                return cloneElement(child, {
-                    style: {
-                        height: `${PAGE_WIDTH}px`,
-                        minWidth: `${PAGE_WIDTH}px`,
-                        maxWidth: `${PAGE_WIDTH}px`,
-                    },
-                });
+                return cloneElement(child, {});
             })
         );
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -63,7 +60,7 @@ function Slider({ title, onCardClick, ...props }) {
                 <div className='slider__window'>
                     <div
                         className='slider__slides'
-                        style={{ transform: `translateX(${offset}px)` }}
+                        style={{ transform: `translateX(${offset}vw)` }}
                     >
                         {pages}
                     </div>

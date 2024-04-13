@@ -1,10 +1,19 @@
 import React from 'react';
 import './Header.sass';
 import Navigation from '../Navigation/Navigation';
+import headerLogo from '../../images/logo-marisa.jpg';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
     return (
         <header className='header'>
+            <NavLink className='header__logo' to='/'>
+                <img
+                    className='header__logo-image'
+                    alt='header logo'
+                    src={headerLogo}
+                />
+            </NavLink>
             <Navigation />
             <div className='header__info'>
                 <a

@@ -3,7 +3,8 @@
 
 .cake
     &__card 
-        width: 400px
+        min-width: 250px
+        width:21vw
         height: 480px
         border-radius: 15px
         overflow: hidden
@@ -20,11 +21,15 @@
 
     &__info
         @include flex-col 
-        padding: 15px
+        padding: 1vw
         justify-content: space-between
-        gap: 25px
+        gap: 1.5vw
 
     &__caption 
+        width: 80%
+        overflow: hidden
+        white-space: nowrap
+        text-overflow: ellipsis
         font-size: 25px
         font-weight: 600
         font-family: $monts-font

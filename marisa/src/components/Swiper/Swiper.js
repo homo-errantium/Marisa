@@ -4,7 +4,7 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import SwiperCard from '../Card/SwiperCard/SwiperCard';
 
 function Swiper({ onCardClick, ...props }) {
-    const PAGE_WIDTH = 1300;
+    const PAGE_WIDTH = 67;
     const [pages, setPages] = useState([]);
     const [offset, setOffset] = useState(0);
 
@@ -53,7 +53,7 @@ function Swiper({ onCardClick, ...props }) {
                     <div
                         className='swiper__slides'
                         style={{
-                            transform: `translateX(${offset}px)`,
+                            transform: `translateX(${offset}vw)`,
                         }}
                     >
                         {pages}

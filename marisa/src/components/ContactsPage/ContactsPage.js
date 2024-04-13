@@ -15,11 +15,6 @@ function ContactsPage() {
             <main className='main'>
                 <section className='contacts'>
                     <div className='contacts__info contacts__info_left'>
-                        {/* <img
-                            src={cherryCakeImage}
-                            alt='фото кондитера'
-                            className='contacts__info-image'
-                        /> */}
                         <div className='contacts__info-text'>
                             <h2 className='contacts__info-title'>
                                 СВЯЗАТЬСЯ СО МНОЙ
