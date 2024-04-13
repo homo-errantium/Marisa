@@ -1,27 +1,23 @@
 @import '../../App/_mixins'
 @import '../../App/_var'
     
-.cakes 
-    @include flex-col
-    padding-top: 20px
-    padding-bottom: 60px
-    align-items: center
-    
+.cakes    
+    padding: 0 0 50px 0
     &__title 
         text-align: center
+        margin: 0 auto
         font-size: 30px
         font-weight: 600
         margin-bottom: 20px
         text-transform: uppercase
-        margin-bottom: 20px
         max-width: 500px
         color: $text-color-brown
+        padding: 50px 0 50px 0
 
     &__gallery 
-        /* column-gap: 50px */
-        width: 67vw
         display: flex
         justify-content: space-between
+        width: 67vw
         flex-wrap: wrap
-        gap: 2%
+        gap: 2vw
 

@@ -4,8 +4,27 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import SliderCard from '../Card/SliderCard/SliderCard';
 
 function Slider({ title, onCardClick, ...props }) {
-    const PAGE_WIDTH = 15;
-    const MARGIN_WIDTH = PAGE_WIDTH * 0.15;
+    let PAGE_WIDTH = 15;
+    let MARGIN_WIDTH = PAGE_WIDTH * 0.15;
+
+    const defineCardWidth = () => {
+        switch (true) {
+            case window.innerWidth < 1440:
+                PAGE_WIDTH = 20.7;
+                MARGIN_WIDTH = PAGE_WIDTH * 0.27;
+                break;
+            default:
+                PAGE_WIDTH = 15;
+                MARGIN_WIDTH = PAGE_WIDTH * 0.15;
+        }
+    };
+
+    useEffect(() => {
+        console.log(window.innerWidth);
+        defineCardWidth();
+        console.log(PAGE_WIDTH);
+    }, [window.innerWidth, PAGE_WIDTH]);
+
     const [pages, setPages] = useState([]);
     const [offset, setOffset] = useState(0);
 

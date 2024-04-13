@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './BurgerMenu.css';
+import './BurgerMenu.sass';
 
 function BurgerMenu(props) {
     const handleClose = props.handleClose;

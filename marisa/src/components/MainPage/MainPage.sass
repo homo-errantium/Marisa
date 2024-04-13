@@ -1,9 +1,8 @@
 @import '../App/_var'
-    
+@import '../App/_mixins'
+
 .main 
-    position: relative
-    display: flex
-    flex-direction: column
+    @include flex-col
     align-items: center
     background: #efefef /*test*/
     width: 100%
@@ -14,8 +13,7 @@
         flex-direction: column
         align-items: center
         width: 100%
-        margin-bottom: 50px
-        padding: 80px 0 80px
+        padding: 4vw 0
         background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.5)), url('../../images/main-top-bg1.jpg')
         object-fit: contain
         background-size: cover
@@ -27,6 +25,7 @@
         display: flex
         flex-direction: column
         align-items: center
+        padding: 4vw 0
 
     &_bottom 
         display: flex
@@ -50,15 +49,15 @@
 
     &__title 
         font-family: $cinzel-font
-        font-size: 70px
+        font-size: 7vw
         font-weight: 500
-        margin: 0 0 30px
+        margin: 0 
         letter-spacing: 0.3rem
         color: #4d220e
 
     &__subtitle 
         font-family: $monts-font
-        font-size: 30px
+        font-size: 5vw
         margin: 0 0 50px
         color: #4d220e
         letter-spacing: 2px

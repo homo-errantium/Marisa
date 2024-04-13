@@ -11,7 +11,6 @@
     align-items: center
     width: 100%
     padding: 18px 70px
-    // position: relative
 
     &__logo
         width: 90px
@@ -34,23 +33,44 @@
 
     &__info-phone
         text-decoration: none
-        // margin-right: 40px
+        font-size: 15px
         color:$text-color-brown
 
     &__info-worktime
         color:$text-color-brown
-        // margin-right: 40px
         font-size: 12px
 
     &__info-city
         color:$text-color-brown
         font-size: 12px
 
-@media (max-width: 768px) 
+@media (max-width: 1000px) 
     .header 
         padding: 18px 30px
-    
 
+        &__info-phone
+            font-size: 12px
+
+        &__info-worktime
+            font-size: 10px
+
+        &__info-city
+            font-size: 10px
+
+@media (max-width: 850px) 
+    .header 
+        padding: 9px 15px
+
+@media (max-width: 768px) 
+    .header
+        flex-direction: row-reverse
+
+        &__logo
+            display: none 
+            
+        &__info
+            align-items: flex-start
+    
 
 @media (max-width: 320px) 
     .header 
