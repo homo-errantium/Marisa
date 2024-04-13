@@ -4,35 +4,57 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import SliderCard from '../Card/SliderCard/SliderCard';
 
 function Slider({ title, onCardClick, ...props }) {
-    let PAGE_WIDTH = 15;
-    let MARGIN_WIDTH = PAGE_WIDTH * 0.15;
-
-    const defineCardWidth = () => {
-        switch (true) {
-            case window.innerWidth < 1440:
-                PAGE_WIDTH = 20.7;
-                MARGIN_WIDTH = PAGE_WIDTH * 0.27;
-                break;
-            default:
-                PAGE_WIDTH = 15;
-                MARGIN_WIDTH = PAGE_WIDTH * 0.15;
-        }
-    };
+    const [marginWidth, setMarginWidth] = useState(0.15);
+    const [cardWidth, setCardWidth] = useState(66.5);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     useEffect(() => {
-        console.log(window.innerWidth);
-        defineCardWidth();
-        console.log(PAGE_WIDTH);
-    }, [window.innerWidth, PAGE_WIDTH]);
+        setWindowWidth(window.innerWidth);
+        handleChangeCardWidth();
+    }, []);
+
+    function handleChangeCardWidth() {
+        switch (true) {
+            case window.innerWidth > 1600:
+                console.log('BIG');
+                setCardWidth(15);
+                setMarginWidth(0.15);
+                break;
+            case window.innerWidth <= 1600 && window.innerWidth > 1100:
+                console.log('MediUm');
+                setCardWidth(20.7);
+                setMarginWidth(0.1);
+                break;
+            case window.innerWidth <= 1100 && window.innerWidth > 600:
+                console.log('MediUm');
+                setCardWidth(32.4);
+                setMarginWidth(0.07);
+                break;
+            default:
+                console.log('HZ');
+                setCardWidth(66.5);
+                setMarginWidth(0.035);
+                break;
+        }
+    }
+
+    useEffect(() => {
+        // setWindowWidth(window.innerWidth);
+        // Trigger this function on resize
+        window.addEventListener('resize', handleChangeCardWidth);
+        //  Cleanup for componentWillUnmount
+        return () =>
+            window.removeEventListener('resize', handleChangeCardWidth);
+    }, [marginWidth, cardWidth, windowWidth]);
 
     const [pages, setPages] = useState([]);
     const [offset, setOffset] = useState(0);
 
     function handleRightClick() {
         setOffset(() => {
-            const newOffset = offset - PAGE_WIDTH - MARGIN_WIDTH;
+            const newOffset = offset - cardWidth - cardWidth * marginWidth;
             const maxOffset = -(
-                (PAGE_WIDTH + MARGIN_WIDTH) *
+                (cardWidth + cardWidth * marginWidth) *
                 (pages.length - 4)
             );
             return Math.max(newOffset, maxOffset);
@@ -41,7 +63,7 @@ function Slider({ title, onCardClick, ...props }) {
 
     function handleLeftClick() {
         setOffset(() => {
-            const newOffset = offset + PAGE_WIDTH + MARGIN_WIDTH;
+            const newOffset = offset + cardWidth + cardWidth * marginWidth;
             return Math.min(newOffset, 0);
         });
     }
@@ -54,8 +76,9 @@ function Slider({ title, onCardClick, ...props }) {
                 {...card}
                 onCardClick={onCardClick}
                 sliderTitle={title}
+                cardWidth={cardWidth}
                 style={{
-                    width: `${PAGE_WIDTH}vw`,
+                    width: `${cardWidth}vw`,
                 }}
             />
         ));
@@ -65,8 +88,7 @@ function Slider({ title, onCardClick, ...props }) {
                 return cloneElement(child, {});
             })
         );
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [cardWidth, onCardClick, props.children, title]);
 
     return (
         <div className='slider'>

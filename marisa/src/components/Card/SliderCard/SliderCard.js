@@ -35,7 +35,12 @@ function Card(card) {
     }
 
     return (
-        <figure className='card'>
+        <figure
+            className='card'
+            style={{
+                width: `${card.cardWidth}vw`,
+            }}
+        >
             <img
                 className='card__image'
                 src={card.image}
