@@ -1,8 +1,7 @@
 {
     "name": "marisa",
-    "homepage": "https://homo-errantium.github.io/marisa/",
+    "homepage": "https://homo-errantium.github.io/marisa/index.html",
     "version": "0.1.0",
-    "homepage": ".",
     "private": true,
     "dependencies": {
         "@testing-library/jest-dom": "^5.17.0",
