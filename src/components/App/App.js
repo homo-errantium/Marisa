@@ -45,6 +45,7 @@ function App() {
         <div className='page'>
             <Routes>
                 <Route
+                    index
                     path='/'
                     element={<MainPage onCardClick={openPopupViewer} />}
                 />
