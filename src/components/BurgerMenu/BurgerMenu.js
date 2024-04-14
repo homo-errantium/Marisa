@@ -23,7 +23,7 @@ function BurgerMenu(props) {
                     <NavLink to='/menu' className='burger-menu__link'>
                         Меню
                     </NavLink>
-                    <NavLink to='/cakes' className='burger-menu__link'>
+                    <NavLink to='/fillings' className='burger-menu__link'>
                         Начинки
                     </NavLink>
                     <NavLink to='/about-me' className='burger-menu__link'>
