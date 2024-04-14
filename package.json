@@ -1,6 +1,5 @@
 {
     "name": "marisa",
-    "homepage": "https://homo-errantium.github.io/",
     "version": "0.1.0",
     "private": true,
     "dependencies": {

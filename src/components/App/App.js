@@ -45,10 +45,10 @@ function App() {
         <div className='page'>
             <Routes>
                 <Route
-                    index
                     path='/'
                     element={<MainPage onCardClick={openPopupViewer} />}
                 />
+
                 <Route
                     path='/menu'
                     element={<MenuPage onCardClick={openPopupViewer} />}
@@ -59,6 +59,7 @@ function App() {
                 />
                 <Route path='/about-me' element={<AboutMePage />} />
                 <Route path='/contacts' element={<ContactsPage />} />
+
                 <Route path='*' element={<NotFoundPage />} />
             </Routes>
             <ImagePopup
