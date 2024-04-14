@@ -1,4 +1,5 @@
 @import '../../App/_var'
+@import '../../App/_mixins'
     
 .filling
     &__card 
@@ -30,3 +31,29 @@
         font-family: $monts-font
         color: $text-color-light
 
+
+@media (max-width: 1200px) 
+    .filling
+        &__card 
+            width:30vw
+            @include flex-col
+            height: 60vh
+
+        &__caption
+            font-size: 2.5vw
+
+
+
+@media (max-width: 550px)
+    .filling
+        &__card 
+            width: 50vw
+            height: min-content
+
+@media (max-width: 320px) 
+    .filling__card 
+        width: 100%
+        // height: max-content
+        
+        &-image
+            height: 200px

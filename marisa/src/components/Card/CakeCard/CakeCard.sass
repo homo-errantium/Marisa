@@ -5,14 +5,14 @@
     &__card 
         min-width: 250px
         width:21vw
-        height: 480px
+        height: fit-content
         border-radius: 15px
         overflow: hidden
         border: $border
 
     &__card-image 
         width: 100%
-        height: 60%
+        height: 300px
         object-fit: cover
         object-position: center center
 
@@ -21,7 +21,7 @@
 
     &__info
         @include flex-col 
-        padding: 1vw
+        padding: 2vw
         justify-content: space-between
         gap: 1.5vw
 
@@ -72,6 +72,46 @@
         color: $text-color-hover
 
 @media (max-width: 1200px) 
+    .cake
+        &__card 
+            width:30vw
+
+        &__caption
+            font-size: 2.5vw
+
+        &__weight 
+            font-size: 2.5vw
+
+        &__weight-title 
+            font-size: 2.5vw
+
+        &__buy-button 
+            font-size: 1.5vw
+            padding: 10px 0 10px 0
+
+
+
+@media (max-width: 770px) 
+    .cake
+        &__card 
+            min-width: 0
+            width: 80%
+        
+        &__caption
+            font-size: 3vw
+
+        &__buy-button 
+            font-size: 2.5vw
+            padding: 10px 0 10px 0
+
+        &__card-image
+            height: 50vw
+
+
+@media (max-width: 320px) 
     .cake__card 
-            width:27vw
+        width: 100%
+        
+        &-image
+            height: 200px
 

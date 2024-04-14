@@ -23,7 +23,7 @@
         width: 55vw
         height: 65vh
         display: flex
-        gap: 30px
+        gap: 2vw
         align-items: flex-start
         position: relative
         margin: 0
@@ -39,6 +39,7 @@
         min-width: 50%
         max-width: 50%
         height: 100%
+        
 
 
     &__image 
@@ -55,8 +56,8 @@
 
 
     &__mini-image 
-        width: 150px
-        height: 150px
+        width: 8vw
+        height: 8vw
         border-radius: 10px
         object-fit: cover
         object-position: center
@@ -90,7 +91,7 @@
         font-weight: 600
         font-family: $monts-font
         color: $text-color-brown
-        margin-bottom: 20px
+        margin-bottom: 1vw
 
 
     &__description 
@@ -99,9 +100,9 @@
         margin: 10px 0 0
         color:  $text-color-brown
         font-family: $monts-font
-        font-size: 20px
+        font-size: 1vw
         font-weight: 400
-        line-height: 30px
+        line-height: 2vw
 
 
     &__description_first-word 
@@ -112,15 +113,15 @@
 
 
     &__button 
-        max-width: 70%
-        padding: 15px 30px 15px 30px
+        width: 20vw
+        padding: 1vw 2vw 1vw 2vw
         border-radius: $border-radius
         background-color: $bg-color-secondary
         color: $text-color-light
         border: none
         text-transform: uppercase
-        font-size: 18px
-        letter-spacing: 2.5px
+        font-size: 1.3vw
+        letter-spacing: 0.5vw
 
 
     &__button:hover 
@@ -145,12 +146,70 @@
         cursor: pointer
 
 
-@media screen and (min-width: 1280px) 
+@media screen and (max-width: 1280px) 
+    .popup__content 
+        width: 55vw
+        height: 45vw
+
     .popup__btn-close 
         width: 32px
         height: 32px
         background-size: 32px
+    // .popup__button
     
 
+@media (max-width: 1024px) 
+    .popup__content 
+        width: 60vw
+        height: 50vw
+
+    .popup__btn-close 
+        position: absolute
+        top: -40px
+        right: -40px
+        width: 3vw
+        height: 3vw
 
 
+    .popup__description 
+        text-align: left
+        max-width: 50vw
+        margin: 10px 0 0
+        color:  $text-color-brown
+        font-family: $monts-font
+        font-size: 1vw
+        font-weight: 400
+        line-height: 15px
+
+@media (max-width: 768px)
+
+    .popup__content 
+        width: 65vw
+        height: 55vw
+
+    .popup__description 
+        font-size: 1.5vw
+        line-height: 1.5vw
+
+    .popup__title
+        font-size: 18px 
+        margin-bottom: 0
+
+@media (max-width: 425px)
+    .popup__title
+        font-size: 15px 
+    .popup__content 
+        width: 70vw
+        height: 70vw
+        padding: 10px
+
+    .popup__description 
+        font-size: 2vw
+        line-height: 2vw
+
+    .popup__btn-close 
+        position: absolute
+        top: -20px
+        right: -20px
+        width: 3vw
+        height: 3vw

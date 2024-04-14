@@ -22,3 +22,26 @@
         column-gap: 2vw
         row-gap: 7vh
 
+@media (max-width: 770px) 
+    .cakes 
+        @include flex-col
+        align-items: center
+        justify-content: center
+
+        &__gallery
+            flex-direction: column
+            align-items: center
+            justify-content: center
+
+        &__title
+            font-size: 4vw
+            padding: 5vw 0 5vw 0
+            width: 80%
+        
+
+@media (max-width: 320px) 
+    .cakes
+        &__title
+            font-size: 6vw
+            padding: 5vw 0 5vw 0
+        

@@ -1,9 +1,17 @@
 import './CakeCard.sass';
+import { useNavigate } from 'react-router-dom';
 
 function CakeCard(cake) {
     function handleClickViewe() {
         cake.onCardClick(cake);
     }
+
+    const navigate = useNavigate();
+    function redirect() {
+        console.log('its buy');
+        navigate('/contacts');
+    }
+
     return (
         <figure className='cake__card'>
             <img
@@ -20,7 +28,11 @@ function CakeCard(cake) {
                     <span className='cake__weight-title'>Вес</span>
                     <span className='cake__weight'>{`${cake.weight} кг`}</span>
                 </div>
-                <button type='button' className='cake__buy-button'>
+                <button
+                    type='button'
+                    className='cake__buy-button'
+                    onClick={redirect}
+                >
                     Заказать
                 </button>
             </figcaption>
