@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import './App.sass';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
 import MainPage from '../MainPage/MainPage';
@@ -60,7 +60,7 @@ function App() {
                 <Route path='/about-me' element={<AboutMePage />} />
                 <Route path='/contacts' element={<ContactsPage />} />
 
-                <Route path='*' element={<NotFoundPage />} />
+                <Route path='*' element={<Navigate to='/' replace={true} />} />
             </Routes>
             <ImagePopup
                 isOpen={selectedCard}
